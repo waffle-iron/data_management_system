@@ -24,6 +24,10 @@ gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',         group: :doc
 
+# Elasticsearch
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -45,6 +49,7 @@ group :test do
   gem "selenium-webdriver"  # Web page interaction
   gem "capybara"  # For integration testing.
   gem "webmock"   # Allows mocking of web apis for instance
+  gem 'elasticsearch-extensions'  # test cluster functionality
 end
 
 group :test, :development do
