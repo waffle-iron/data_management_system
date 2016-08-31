@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831224456) do
+ActiveRecord::Schema.define(version: 20160831225515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "chuck_norrises", force: :cascade do |t|
-    t.text     "fact"
-    t.integer  "knockouts"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.jsonb    "kungfu",     default: {}
+    t.index ["kungfu"], name: "index_chuck_norrises_on_kungfu", using: :gin
   end
 
 end
