@@ -16,7 +16,7 @@ before_script:
   - sudo mkdir -p /usr/share/elasticsearch/config/scripts   
   - sudo cp /etc/elasticsearch/elasticsearch.yml /usr/share/elasticsearch/config
   - sudo cp /etc/elasticsearch/logging.yml /usr/share/elasticsearch/config
-  - psql -c 'create database app_test;' -U postgres
+  - psql -c 'create database dms_test;' -U postgres
   - sleep 10 # To make sure Elasticsearch instance is ready
 script: bundle exec rspec --tag slow   # we should run all the tests in CI
 branches:
