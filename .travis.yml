@@ -9,7 +9,7 @@ addons:
   postgresql: "9.4"
 before_install: 
   # Install a more recent version of elasticsearch, also couldn't find preinstaleld version 
-  - curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.5/elasticsearch-2.3.5.deb && sudo dpkg -i --force-confnew elasticsearch-2.3.5.deb && sudo service elasticsearch restart
+  - curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.4.0/elasticsearch-2.4.0.deb && sudo dpkg -i --force-confnew elasticsearch-2.4.0.deb && sudo service elasticsearch restart
 before_script:
   # The installation fails to create a scripts directory or copy the elasticsearch.yml
   # or logging.yml files over. THis fixes that.
@@ -20,6 +20,7 @@ before_script:
   - sleep 10 # To make sure Elasticsearch instance is ready
 script: 
   - export RAILS_ENV=test
+  - export TEST_CLUSTER_COMMAND=/usr/share/elasticsearch/bin/elasticsearch
   - bundle exec rake db:create db:schema:load db:test:prepare
   - bundle exec rspec --tag slow   # we should run all the tests in CI
 branches:

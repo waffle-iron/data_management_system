@@ -66,6 +66,8 @@ end
 gem "factory_girl_rails"                  # Creates factories for models
 gem 'faker'                               # Handy for creating fake data
 
+gem 'coveralls', require: false           # Code coverage
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
