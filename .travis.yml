@@ -22,7 +22,7 @@ script:
   - export RAILS_ENV=test
   - bundle exec rake db:create db:schema:load db:test:prepare
   - bundle exec rspec --tag slow   # we should run all the tests in CI
-branches:
-  only:
-  - master
-  - develop
+# branches:
+#   only:
+  # - master
+  # - develop
