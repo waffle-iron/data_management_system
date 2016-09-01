@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/olendorf/data_management_system.png?label=ready&title=Ready)](https://waffle.io/olendorf/data_management_system)
 [![Build Status](https://travis-ci.org/olendorf/data_management_system.svg?branch=develop)](https://travis-ci.org/olendorf/data_management_system)
 [![Coverage Status](https://coveralls.io/repos/github/olendorf/data_management_system/badge.svg)](https://coveralls.io/github/olendorf/data_management_system)
 [![Dependency Status](https://gemnasium.com/badges/github.com/olendorf/data_management_system.svg)](https://gemnasium.com/github.com/olendorf/data_management_system)
